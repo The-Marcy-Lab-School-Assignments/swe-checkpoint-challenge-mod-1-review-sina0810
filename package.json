@@ -1,0 +1,21 @@
+{
+  "name": "swe-assessment-2.5-functions-objects",
+  "version": "1.0.0",
+  "description": "Mod 2.5 Assessment: Functions, Scope, Objects, and Iterators",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:w": "jest --watchAll",
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.4.3",
+    "eslint": "^8.44.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
+  }
+}
+
