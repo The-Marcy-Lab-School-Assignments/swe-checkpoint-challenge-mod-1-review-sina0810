@@ -44,9 +44,28 @@ console.log(getLetterGrade(65)); // This should print "Your grade is: F"
 
 Your response...
 
+- The reason that the problem occurr is that because we are re-assigning the `letter` variable again inside of the if statment which is unnecessary. 
+- We don't nedd to declared a varibale twice.  
 **Part B:**
 
 Your response...
+- I would only get ridde of the `let` variable inside of the if statment so it dosen't declared the `letter` twice. 
+```js
+const getLetterGrade = (score) => {
+  let letter;
+  if (score >= 90) {
+     letter = "A";
+  } else if (score >= 80) {
+     letter = "B";
+  } else if (score >= 70) {
+     letter = "C";
+  } else {
+     letter = "F";
+  }
+
+  return "Your grade is: " + letter;
+}
+```
 
 ---
 
@@ -70,17 +89,22 @@ console.log(originalSettings.volume);
 **Part A:**
 
 Your response...
+- 75 will be logged to the console, that is beucasue we have declared a new variable and we assigned to the `originalSettings`. 
+- So, they will get the same value.
 
 **Part B:**
 
 Your response...
+- This is how I would declared new variable, so it doesn't affect the `originalSettings`. 
+
 
 **Corrected Code:**
 
 ```js
 // Fix this code so newSettings is a true copy
 const originalSettings = { volume: 50, brightness: 80 };
-const newSettings = originalSettings;
+ const newSettings = ''; 
+ //By assigned it to an empaty string it will not affect the original one. 
 newSettings.volume = 75;
 console.log(originalSettings.volume);
 ```
@@ -111,3 +135,9 @@ Walk through what happens in the first iteration of filter:
 ### Response 3
 
 Your response...
+- The value of `product` inside of **filter** HOF is holding the value for each of the elements that is stored inside of `products` array. 
+
+- Only the products that are `inStock` will get returned due to the **filter** method. 
+
+- The returned value will be declared to the console after it has been invoked. 
+- The returned value is the ones that are passed the **filter** method, which only be the ones that is `inStock`.
